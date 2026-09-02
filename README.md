@@ -1,89 +1,106 @@
-# SUP Soft Skills Lab
+# 🧠 SUP Soft Skills Lab
 
-Aplicación web desarrollada con **Next.js, React y TypeScript** para presentar y explorar el catálogo de actividades del **SUP Soft Skills Lab**.
+> Plataforma web para explorar, organizar y facilitar actividades orientadas al desarrollo de **habilidades blandas aplicadas al contexto tecnológico**.
 
-La aplicación fue migrada desde una implementación basada en HTML, CSS y JavaScript imperativo hacia una arquitectura modular con **Next.js App Router**, componentes React reutilizables y datos tipados.
+**SUP Soft Skills Lab** es una aplicación web desarrollada para presentar un catálogo de actividades diseñadas para trabajar competencias como **comunicación efectiva, escucha activa, trabajo en equipo, empatía, pensamiento crítico y resolución colaborativa de problemas**.
 
-## Objetivos
+El proyecto fue migrado desde una implementación inicial basada en **HTML, CSS y JavaScript imperativo** hacia una arquitectura moderna utilizando **Next.js App Router, React y TypeScript**, buscando mejorar la organización, escalabilidad y mantenibilidad del código.
 
-- Presentar el propósito y modelo del programa.
-- Mostrar las actividades organizadas por módulos.
-- Permitir filtrar actividades por módulo y categoría.
-- Consultar el detalle de cada actividad mediante un diálogo/modal.
-- Mantener una interfaz responsive y accesible.
-- Separar presentación, lógica, datos y tipos para facilitar el mantenimiento.
+---
 
-## Stack tecnológico
+## 🎯 Objetivo del proyecto
 
-- **Next.js 16** — App Router.
-- **React 19** — construcción de la interfaz.
-- **TypeScript 5** — tipado estático.
-- **CSS** — estilos globales y responsive.
-- **DM Sans + Syne** — tipografías.
+El objetivo del **SUP Soft Skills Lab** es proporcionar un espacio donde docentes y estudiantes puedan acceder a actividades prácticas que permitan desarrollar habilidades interpersonales dentro de contextos relacionados con tecnología.
 
-No requiere backend ni base de datos: el contenido de las actividades está definido como datos estáticos tipados dentro de `src/data`.
+La aplicación permite:
 
-## Requisitos
+- 📚 Explorar actividades organizadas por módulos.
+- 🔎 Filtrar actividades por módulo y categoría.
+- 🧩 Consultar el detalle de cada actividad.
+- 👥 Trabajar competencias vinculadas al trabajo colaborativo.
+- 💬 Fortalecer la comunicación y la escucha activa.
+- 🧠 Desarrollar pensamiento crítico y resolución de problemas.
+- 📱 Acceder a la aplicación desde diferentes dispositivos.
 
-- Node.js 20 o superior recomendado.
-- npm, pnpm, yarn o bun.
+---
 
-## Instalación
+## 🚀 Características principales
 
-Clonar o descargar el proyecto y ejecutar:
+### 📚 Catálogo de actividades
 
-```bash
-npm install
-```
+Las actividades se encuentran organizadas por módulos y almacenadas como datos tipados.
 
-También se puede utilizar pnpm:
+Cada actividad puede contener información como:
 
-```bash
-pnpm install
-```
+- Nombre.
+- Módulo.
+- Categoría.
+- Objetivo.
+- Duración.
+- Cantidad de participantes.
+- Materiales.
+- Consigna.
+- Dinámica.
+- Reflexión o cierre.
 
-## Desarrollo
+### 🔎 Sistema de filtros
 
-Iniciar el servidor de desarrollo:
+El catálogo permite filtrar las actividades para encontrar rápidamente propuestas específicas según:
 
-```bash
-npm run dev
-```
+- Módulo.
+- Categoría.
+- Competencia trabajada.
 
-Luego abrir:
+La lógica de filtrado se encuentra encapsulada en un custom hook para mantener separada la lógica de negocio de la presentación.
 
-```text
-http://localhost:3000
-```
+### 💬 Detalle de actividades
 
-## Build de producción
+Cada actividad puede abrirse mediante un diálogo accesible que presenta la información completa sin abandonar la página principal.
 
-Generar el build:
+### 📱 Diseño responsive
 
-```bash
-npm run build
-```
+La interfaz está diseñada bajo un enfoque responsive y contempla:
 
-Iniciar la aplicación en producción:
+- Desktop.
+- Tablet.
+- Mobile.
 
-```bash
-npm run start
-```
+Los componentes y grillas se adaptan automáticamente al tamaño de pantalla.
 
-## Lint
+---
 
-Ejecutar ESLint:
+# 🛠️ Stack tecnológico
 
-```bash
-npm run lint
-```
+| Tecnología         | Uso                              |
+| ------------------ | -------------------------------- |
+| **Next.js 16**     | Framework principal y App Router |
+| **React 19**       | Construcción de interfaces       |
+| **TypeScript 5**   | Tipado estático                  |
+| **Tailwind CSS 4** | Sistema de estilos               |
+| **ESLint 9**       | Análisis y calidad de código     |
+| **DM Sans + Syne** | Tipografías                      |
 
-## Arquitectura
+### Arquitectura
 
-La aplicación utiliza **Next.js App Router** y está organizada por responsabilidades.
+La aplicación utiliza principalmente **React Server Components**, incorporando Client Components únicamente en las partes que requieren interacción del navegador.
+
+No requiere:
+
+- Backend.
+- Base de datos.
+- API externa.
+- Autenticación.
+- Persistencia.
+
+Los contenidos actuales se encuentran definidos como **datos estáticos tipados** dentro de `src/data`.
+
+---
+
+# 📂 Arquitectura del proyecto
 
 ```text
 src/
+│
 ├── app/
 │   ├── globals.css
 │   ├── layout.tsx
@@ -127,131 +144,288 @@ src/
     └── activity.ts
 ```
 
-## Responsabilidades
+---
 
-### `app/`
+# 🧩 Responsabilidad de cada capa
 
-Contiene la configuración principal del App Router.
+## `app/`
 
-- `page.tsx`: composición de la página principal. No concentra lógica de negocio ni renderizado complejo.
-- `layout.tsx`: layout raíz y metadata.
-- `globals.css`: estilos globales, variables de diseño y responsive.
+Contiene la configuración principal del **Next.js App Router**.
+
+### `page.tsx`
+
+Actúa como punto de composición de la página principal.
+
+Su responsabilidad es organizar las diferentes secciones, evitando concentrar lógica de negocio o grandes cantidades de JSX.
+
+### `layout.tsx`
+
+Define el layout raíz, metadata y configuración global de la aplicación.
+
+### `globals.css`
+
+Contiene:
+
+- Variables visuales.
+- Estilos globales.
+- Responsive.
+- Tipografía.
+- Reglas de accesibilidad visual.
+
+---
+
+## `components/`
+
+Contiene los componentes reutilizables de la interfaz.
 
 ### `components/layout/`
 
-Componentes estructurales reutilizables:
+Componentes estructurales:
 
-- Header.
-- Footer.
+- `SiteHeader`
+- `SiteFooter`
 
 ### `components/sections/`
 
-Cada sección visual de la landing se encuentra aislada en su propio componente.
+Secciones principales de la landing:
 
-Esto evita tener un `page.tsx` con cientos de líneas de JSX.
+- `HeroSection`
+- `PurposeSection`
+- `ModelSection`
+- `FacilitationSection`
+
+Cada sección mantiene una responsabilidad visual específica.
 
 ### `components/activities/`
 
-Contiene todo lo relacionado con el catálogo de actividades:
-
-- `ActivitiesSection`: orquesta filtros, listado y modal.
-- `ActivityFilters`: filtros de búsqueda.
-- `ActivityGrid`: render del listado.
-- `ActivityCard`: representación individual de una actividad.
-- `ActivityDialog`: detalle completo de una actividad.
-
-### `hooks/`
-
-`useActivityFilters.ts` encapsula el estado y la lógica de filtrado.
-
-De esta manera, los componentes visuales no necesitan conocer cómo se calculan los resultados.
-
-### `data/`
-
-Los datos están separados de la UI.
-
-Las actividades están divididas por módulo:
+Contiene todo lo relacionado con el catálogo:
 
 ```text
-module-1.ts
-module-2.ts
-module-3.ts
-module-4.ts
-module-5.ts
-```
-
-`data/activities/index.ts` centraliza la exportación para que el resto de la aplicación pueda consumirlas desde un único punto.
-
-### `types/`
-
-`activity.ts` contiene los tipos TypeScript utilizados para representar las actividades y sus propiedades.
-
-### `lib/`
-
-Contiene funciones auxiliares que no pertenecen a un componente específico.
-
-## Flujo de datos
-
-El flujo principal de actividades es:
-
-```text
-Datos estáticos
-     ↓
-module-*.ts
-     ↓
-activities/index.ts
-     ↓
 ActivitiesSection
-     ↓
-useActivityFilters
-     ↓
-ActivityGrid
-     ↓
-ActivityCard
-     ↓
-ActivityDialog
+       │
+       ├── ActivityFilters
+       │
+       └── ActivityGrid
+               │
+               └── ActivityCard
+                       │
+                       └── ActivityDialog
 ```
 
-La UI no modifica directamente el DOM. React administra el renderizado y el estado de la interfaz.
+---
 
-## Diseño
+# 🧠 Gestión del estado
 
-La interfaz utiliza una identidad visual basada en:
+La lógica de filtrado se encuentra encapsulada en:
 
-- Negro: `#000000`
-- Blanco: `#FFFFFF`
-- Amarillo principal: `#FFFF05`
-- Amarillo suave: `#FFFFB8`
-- Texto secundario: `#5F6368`
-- Bordes: `#E5E5E5`
+```text
+src/hooks/useActivityFilters.ts
+```
 
-El amarillo se utiliza principalmente para acciones, elementos destacados, badges y estados activos.
+Esto permite separar:
 
-## Responsive
+```text
+Interfaz
+   ↓
+Hook
+   ↓
+Lógica de filtrado
+   ↓
+Datos
+```
 
-La interfaz contempla tres escenarios principales:
+Los componentes visuales no necesitan conocer los detalles internos de cómo se calculan los resultados.
 
-- Desktop.
-- Tablet.
-- Mobile.
+---
 
-Los grids se adaptan automáticamente y el menú de navegación se simplifica en resoluciones pequeñas.
+# 📚 Organización de los datos
 
-## Accesibilidad
+Las actividades están separadas por módulo:
 
-Se contemplan prácticas básicas de accesibilidad:
+```text
+src/data/activities/
 
-- Elementos semánticos HTML.
-- `aria-live` para actualización de resultados.
-- `aria-pressed` para filtros activos.
-- Diálogo accesible para el detalle de actividades.
-- Cierre mediante Escape.
-- Clase `sr-only` para contenido accesible para lectores de pantalla.
+├── module-1.ts
+├── module-2.ts
+├── module-3.ts
+├── module-4.ts
+└── module-5.ts
+```
+
+La exportación centralizada se encuentra en:
+
+```text
+src/data/activities/index.ts
+```
+
+Esto permite que el resto de la aplicación consuma las actividades desde un único punto.
+
+---
+
+# 🔄 Flujo de datos
+
+El flujo principal del catálogo es:
+
+```text
+┌─────────────────────┐
+│   Datos estáticos   │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    module-*.ts      │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│   activities/index  │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│  ActivitiesSection  │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│ useActivityFilters  │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    ActivityGrid     │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│    ActivityCard     │
+└──────────┬──────────┘
+           ↓
+┌─────────────────────┐
+│   ActivityDialog    │
+└─────────────────────┘
+```
+
+React administra el estado y el renderizado de la interfaz, sin necesidad de manipulación directa del DOM.
+
+---
+
+# 🎨 Identidad visual
+
+La interfaz utiliza una identidad visual minimalista basada principalmente en:
+
+| Color          | Hexadecimal | Uso                            |
+| -------------- | ----------- | ------------------------------ |
+| Negro          | `#000000`   | Fondos y elementos principales |
+| Blanco         | `#FFFFFF`   | Superficies y texto            |
+| Amarillo       | `#FFFF05`   | Acciones y destacados          |
+| Amarillo suave | `#FFFFB8`   | Elementos secundarios          |
+| Gris           | `#5F6368`   | Texto secundario               |
+| Gris claro     | `#E5E5E5`   | Bordes                         |
+
+El amarillo funciona como color de énfasis para:
+
+- Acciones.
+- Estados activos.
+- Badges.
+- Elementos destacados.
+- Indicadores visuales.
+
+---
+
+# Accesibilidad
+
+La aplicación incorpora prácticas básicas de accesibilidad:
+
+- HTML semántico.
 - Navegación mediante teclado.
+- Soporte para cierre de diálogos mediante `Escape`.
+- `aria-live` para comunicar cambios en los resultados.
+- `aria-pressed` para indicar filtros activos.
+- Diálogos accesibles.
+- Clase `sr-only` para contenido destinado a lectores de pantalla.
+- Contraste visual en elementos principales.
 
-## Agregar una nueva actividad
+La accesibilidad se considera parte de la implementación y no únicamente una capa visual posterior.
 
-Para agregar una actividad existente a un módulo, editar el archivo correspondiente dentro de:
+---
+
+# 💻 Requisitos
+
+Para ejecutar el proyecto localmente se recomienda:
+
+- **Node.js 20+**
+- npm, pnpm, yarn o bun.
+
+---
+
+# ⚙️ Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/CarolinaAriza-mind/SUPs-Henry2026.git
+```
+
+Ingresar al proyecto:
+
+```bash
+cd SUPs-Henry2026
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+También es posible utilizar pnpm:
+
+```bash
+pnpm install
+```
+
+---
+
+# ▶️ Desarrollo
+
+Iniciar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en:
+
+```text
+http://localhost:3000
+```
+
+---
+
+# 📦 Build de producción
+
+Generar el build:
+
+```bash
+npm run build
+```
+
+Iniciar la aplicación en modo producción:
+
+```bash
+npm run start
+```
+
+---
+
+# 🔍 Lint
+
+Ejecutar ESLint:
+
+```bash
+npm run lint
+```
+
+---
+
+# ➕ Agregar una nueva actividad
+
+Para agregar una actividad a un módulo existente, editar el archivo correspondiente:
 
 ```text
 src/data/activities/
@@ -263,61 +437,187 @@ Por ejemplo:
 src/data/activities/module-3.ts
 ```
 
-La actividad debe respetar el tipo definido en:
+La nueva actividad debe respetar el tipo definido en:
 
 ```text
 src/types/activity.ts
 ```
 
-No es necesario modificar `ActivityCard`, `ActivityGrid` ni `ActivityDialog` para agregar una actividad estándar.
+Una actividad estándar puede incorporarse sin modificar:
 
-## Agregar un nuevo módulo
+```text
+ActivityCard
+ActivityGrid
+ActivityDialog
+```
 
-Si se incorpora un módulo nuevo:
+Esto permite mantener la UI desacoplada de los contenidos.
 
-1. Crear `module-6.ts` dentro de `src/data/activities/`.
-2. Definir las actividades utilizando el tipo `Activity`.
-3. Exportar el módulo desde `src/data/activities/index.ts`.
-4. Agregar el filtro correspondiente en `src/data/activity-filters.ts` si aplica.
-5. Verificar la presentación del nuevo módulo en los filtros y cards.
+---
 
-## Principios de mantenimiento
+# 🧱 Agregar un nuevo módulo
 
-La aplicación debe mantener las siguientes reglas:
+Si el proyecto incorpora un nuevo módulo:
 
-- No colocar toda la UI en `page.tsx`.
-- No crear componentes de cientos de líneas cuando puedan dividirse por responsabilidad.
-- No mezclar datos estáticos con JSX si pueden mantenerse en `src/data`.
-- No manipular el DOM directamente con `querySelector`, `innerHTML` o `getElementById`.
-- Mantener la lógica reutilizable en hooks o funciones de `lib`.
-- Mantener los modelos de datos en `types`.
-- Preferir componentes pequeños y composables.
-- Mantener Server Components cuando no se necesita estado o interacción del navegador.
-- Usar Client Components únicamente donde existe interacción.
+### 1. Crear el archivo
 
-## Migración realizada
+```text
+src/data/activities/module-6.ts
+```
 
-La versión original estaba basada principalmente en JavaScript imperativo y concentraba gran parte de la lógica en archivos extensos.
+### 2. Definir las actividades
 
-La migración a Next.js separa las responsabilidades en:
+Utilizando el tipo:
+
+```text
+Activity
+```
+
+### 3. Exportar el módulo
+
+Actualizar:
+
+```text
+src/data/activities/index.ts
+```
+
+### 4. Actualizar los filtros
+
+Si corresponde, agregar el nuevo módulo en:
+
+```text
+src/data/activity-filters.ts
+```
+
+### 5. Verificar la interfaz
+
+Comprobar que:
+
+- El módulo aparezca en los filtros.
+- Las actividades se rendericen correctamente.
+- El diálogo muestre la información completa.
+- La interfaz siga funcionando correctamente en mobile.
+
+---
+
+# 🧭 Principios de arquitectura
+
+El proyecto busca mantener una arquitectura simple y escalable.
+
+### Separación de responsabilidades
 
 ```text
 UI              → components/
 Páginas         → app/
-Estado/Lógica   → hooks/
+Estado / lógica → hooks/
 Datos           → data/
 Tipos           → types/
 Utilidades      → lib/
 Estilos         → app/globals.css
 ```
 
-El resultado permite continuar ampliando la aplicación sin convertir nuevamente la página principal o un único archivo de datos en archivos monolíticos.
+### Reglas principales
 
-## Estado actual
+- Evitar concentrar toda la UI en `page.tsx`.
+- Evitar componentes excesivamente grandes.
+- Mantener los datos separados de la presentación.
+- Evitar manipulación directa del DOM.
+- Reutilizar lógica mediante hooks y utilidades.
+- Mantener los modelos de datos en `types`.
+- Preferir componentes pequeños y composables.
+- Utilizar Server Components cuando no sea necesaria interacción del navegador.
+- Utilizar Client Components únicamente donde exista una necesidad real de estado o interacción.
 
-La aplicación es una **landing/catalogue frontend estática**, sin autenticación, API ni persistencia de datos.
+---
 
-Las futuras integraciones pueden incorporarse sin modificar la estructura base, agregando por ejemplo:
+# 🔄 Migración tecnológica
+
+El proyecto nació a partir de una implementación basada principalmente en:
+
+```text
+HTML
+CSS
+JavaScript imperativo
+```
+
+La nueva implementación utiliza:
+
+```text
+Next.js
+   +
+React
+   +
+TypeScript
+```
+
+La migración permitió pasar de una estructura más monolítica hacia una arquitectura basada en responsabilidades.
+
+### Antes
+
+```text
+HTML
+ │
+ └── JavaScript
+       │
+       └── Manipulación directa del DOM
+```
+
+### Ahora
+
+```text
+Next.js App Router
+        │
+        ├── Pages
+        ├── Components
+        ├── Hooks
+        ├── Data
+        ├── Types
+        └── Utilities
+```
+
+El resultado facilita:
+
+- Mantenimiento.
+- Reutilización.
+- Escalabilidad.
+- Tipado.
+- Incorporación de nuevas actividades.
+- Evolución futura del proyecto.
+
+---
+
+# 🔮 Próximos pasos
+
+Actualmente, **SUP Soft Skills Lab** funciona como una **landing/catalogue frontend estática**.
+
+La arquitectura permite incorporar futuras funcionalidades sin modificar la estructura principal.
+
+Algunas posibles evoluciones:
+
+```text
+Backend
+   ↓
+API
+   ↓
+Base de datos
+   ↓
+Gestión dinámica de actividades
+```
+
+Por ejemplo:
+
+- Panel de administración.
+- CRUD de actividades.
+- Persistencia de datos.
+- Autenticación.
+- Gestión de usuarios.
+- Actividades favoritas.
+- Búsqueda avanzada.
+- Seguimiento de actividades realizadas.
+- Métricas de participación.
+- Integración con una API.
+
+En ese escenario podrían incorporarse nuevas capas como:
 
 ```text
 src/
@@ -326,4 +626,42 @@ src/
 └── schemas/
 ```
 
-si posteriormente las actividades o contenidos pasan a ser administrados desde un backend.
+sin necesidad de modificar la estructura fundamental de componentes, hooks, datos y tipos.
+
+---
+
+# 📌 Estado actual
+
+| Característica           | Estado |
+| ------------------------ | ------ |
+| Landing page             | ✅     |
+| Catálogo de actividades  | ✅     |
+| Organización por módulos | ✅     |
+| Filtros                  | ✅     |
+| Detalle de actividades   | ✅     |
+| Diseño responsive        | ✅     |
+| Accesibilidad básica     | ✅     |
+| Backend                  | —      |
+| Base de datos            | —      |
+| Autenticación            | —      |
+| Persistencia             | —      |
+
+**Tipo:** Frontend / Web Application
+
+**Arquitectura:** Next.js App Router
+
+**Renderizado:** Static / Server Components + Client Components donde corresponde
+
+---
+
+# 👩‍💻 Autora
+
+**Carolina Ariza**
+
+Proyecto desarrollado como parte del trabajo sobre **Soft Skills aplicadas al aprendizaje y desarrollo en tecnología**.
+
+---
+
+## 📄 Licencia
+
+Este proyecto es de uso educativo y forma parte del desarrollo del **SUP Soft Skills Lab**.
