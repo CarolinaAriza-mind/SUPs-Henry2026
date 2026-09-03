@@ -8,6 +8,18 @@ El proyecto fue migrado desde una implementación inicial basada en **HTML, CSS 
 
 ---
 
+## 🚀 Acceso a la aplicación
+
+La aplicación se encuentra disponible en producción y puede ser utilizada directamente por los **Profesores Asistentes (PA)** para consultar y utilizar las actividades.
+
+### 🌐 Aplicación en producción
+
+**👉 https://su-ps-henry2026.vercel.app/**
+
+> **Importante:** No es necesario instalar el proyecto para utilizar la aplicación en producción. Simplemente ingresar al enlace desde el navegador.
+
+---
+
 ## 🎯 Objetivo del proyecto
 
 El objetivo del **SUP Soft Skills Lab** es proporcionar un espacio donde docentes y estudiantes puedan acceder a actividades prácticas que permitan desarrollar habilidades interpersonales dentro de contextos relacionados con tecnología.
@@ -100,6 +112,7 @@ Los contenidos actuales se encuentran definidos como **datos estáticos tipados*
 
 ```text
 src/
+
 │
 ├── app/
 │   ├── globals.css
@@ -206,10 +219,10 @@ ActivitiesSection
        ├── ActivityFilters
        │
        └── ActivityGrid
-               │
-               └── ActivityCard
-                       │
-                       └── ActivityDialog
+              │
+              └── ActivityCard
+                     │
+                     └── ActivityDialog
 ```
 
 ---
@@ -272,11 +285,11 @@ El flujo principal del catálogo es:
 └──────────┬──────────┘
            ↓
 ┌─────────────────────┐
-│    module-*.ts      │
+│     module-*.ts     │
 └──────────┬──────────┘
            ↓
 ┌─────────────────────┐
-│   activities/index  │
+│  activities/index   │
 └──────────┬──────────┘
            ↓
 ┌─────────────────────┐
@@ -327,7 +340,7 @@ El amarillo funciona como color de énfasis para:
 
 ---
 
-# Accesibilidad
+# ♿ Accesibilidad
 
 La aplicación incorpora prácticas básicas de accesibilidad:
 
@@ -558,8 +571,8 @@ La migración permitió pasar de una estructura más monolítica hacia una arqui
 HTML
  │
  └── JavaScript
-       │
-       └── Manipulación directa del DOM
+        │
+        └── Manipulación directa del DOM
 ```
 
 ### Ahora
@@ -621,6 +634,7 @@ En ese escenario podrían incorporarse nuevas capas como:
 
 ```text
 src/
+
 ├── services/
 ├── api/
 └── schemas/
@@ -632,25 +646,28 @@ sin necesidad de modificar la estructura fundamental de componentes, hooks, dato
 
 # 📌 Estado actual
 
-| Característica           | Estado |
-| ------------------------ | ------ |
-| Landing page             | ✅     |
-| Catálogo de actividades  | ✅     |
-| Organización por módulos | ✅     |
-| Filtros                  | ✅     |
-| Detalle de actividades   | ✅     |
-| Diseño responsive        | ✅     |
-| Accesibilidad básica     | ✅     |
-| Backend                  | —      |
-| Base de datos            | —      |
-| Autenticación            | —      |
-| Persistencia             | —      |
+| Característica                          | Estado |
+| --------------------------------------- | ------ |
+| Landing page                            | ✅     |
+| Catálogo de actividades                 | ✅     |
+| Organización por módulos                | ✅     |
+| Filtros                                 | ✅     |
+| Detalle de actividades                  | ✅     |
+| Diseño responsive                       | ✅     |
+| Accesibilidad básica                    | ✅     |
+| **Aplicación disponible en producción** | **✅** |
+| Backend                                 | —      |
+| Base de datos                           | —      |
+| Autenticación                           | —      |
+| Persistencia                            | —      |
 
 **Tipo:** Frontend / Web Application
 
 **Arquitectura:** Next.js App Router
 
 **Renderizado:** Static / Server Components + Client Components donde corresponde
+
+**Producción:** https://su-ps-henry2026.vercel.app/
 
 ---
 
