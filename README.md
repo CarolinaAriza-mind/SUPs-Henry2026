@@ -10,7 +10,7 @@ El proyecto fue migrado desde una implementación inicial basada en **HTML, CSS 
 
 ## 🚀 Acceso a la aplicación
 
-La aplicación se encuentra disponible en producción y puede ser utilizada directamente por los **Profesores Asistentes (PA)** para consultar y utilizar las actividades.
+La aplicación se encuentra disponible en producción y puede ser utilizada directamente por los **Teaching Assitant (TA)** para consultar y utilizar las actividades.
 
 ### 🌐 Aplicación en producción
 
