@@ -2,186 +2,182 @@ import type { Activity } from "@/types/activity";
 
 export const module5Activities: Activity[] = [
   {
-    "id": "m5-01",
-    "module": 5,
-    "title": "Elevator pitch técnico",
-    "duration": "45–50 min",
-    "skills": [
-      "Presentación",
-      "Comunicación efectiva"
+    id: "m5-01",
+    module: 5,
+    title: " Elevator pitch técnico",
+    duration: " 45 min",
+    skills: [" Presentación", "Comunicación efectiva"],
+    frontBack: " Front + Back",
+    description:
+      "Cada participante presenta una idea técnica en menos de un minuto utilizando lenguaje comprensible.",
+    objective:
+      "Aprender a comunicar valor sin esconderse detrás de tecnicismos.",
+    materials:
+      "Discord con voz o chat, cronómetro y plantilla: para quién | problema | solución | beneficio | próximo paso. No se requiere proyecto real.",
+    steps: [
+      "GUÍA DEL TA · Antes de clase: Prepará tríos y avisá que el objetivo es hacerse entender, no vender una trayectoria inventada. Ofrecé el caso ficticio a quien no tenga un proyecto.",
+
+      "CONSIGNA PARA COMPARTIR · Presentá una idea en 60 segundos para una persona que no conoce tu proyecto. Después escuchá qué entendió tu audiencia y repetí el mensaje con una mejora concreta.",
+
+      "RECURSOS DEL DESAFÍO · Caso opcional: una app permite que una biblioteca registre préstamos y consulte devoluciones pendientes. Antes usaban un cuaderno y les costaba encontrar qué libro tenía cada socio. Todavía no hay métricas de mejora. Ejemplo de inicio: «Para quienes administran una biblioteca, esta app reúne préstamos y devoluciones en un lugar». No inventen resultados ni porcentajes. Cierre posible: invitar a probar el flujo o pedir feedback.",
+
+      "ROLES Y REGLAS · Tríos: presentador, oyente y observador; roten. El oyente devuelve qué problema y beneficio entendió, sin completar lo que faltó. El observador registra tiempo, claridad y tecnicismos. No se evalúa acento, cámara ni extroversión.",
+
+      "Modelo y objetivo (5 min) · El TA presenta la plantilla y un ejemplo de jerga que puede traducirse a lenguaje cotidiano.",
+
+      "Preparación (7 min) · Cada persona redacta cinco frases y elige una audiencia concreta.",
+
+      "Primera ronda (12 min) · Tres turnos de cuatro minutos: pitch de un minuto, devolución del oyente, observación y anotación de mejoras.",
+
+      "Reescritura (6 min) · Eliminen información secundaria y aclaren el beneficio sin inventar evidencia.",
+
+      "Segunda ronda (9 min) · Tres turnos de tres minutos: nuevo pitch, paráfrasis del oyente y comparación con la versión anterior.",
+
+      "Cierre (6 min) · Compartan qué cambio mejoró la comprensión y qué pregunta harían a una audiencia real.",
+
+      "ADAPTACIONES · Con dos personas, alternen presentación y devolución y hagan una tercera versión. Con cuatro, sumen otro oyente de una audiencia distinta. Puede presentarse por escrito con una extensión equivalente. Para 40 minutos, reduzcan preparación a cinco y primera ronda a nueve minutos.",
     ],
-    "frontBack": "Front + Back",
-    "description": "Cada participante presenta una idea técnica en menos de un minuto utilizando lenguaje comprensible.",
-    "objective": "Aprender a comunicar valor sin esconderse detrás de tecnicismos.",
-    "materials": "Proyecto o idea técnica del participante.",
-    "steps": [
-      "Cada participante elige una funcionalidad o proyecto.",
-      "Tiene un minuto para explicar qué problema resuelve.",
-      "Debe evitar tecnicismos innecesarios.",
-      "Los compañeros indican qué entendieron.",
-      "Se repite el pitch incorporando mejoras."
+    debrief: [
+      "¿Qué recordó la persona que escuchó?",
+      "¿Qué palabra necesitó explicación?",
+      "¿El beneficio era concreto y estaba respaldado?",
+      "¿Qué decidiste dejar afuera para que se entendiera mejor?",
     ],
-    "debrief": [
-      "¿Qué entendió realmente la audiencia?",
-      "¿Qué tecnicismos sobraron?",
-      "¿Qué parte del pitch generó más interés?"
-    ],
-    "transfer": "Un profesional necesita explicar decisiones técnicas a personas técnicas y no técnicas."
+    transfer:
+      "Comunicar valor requiere adecuar el mensaje a la audiencia. Entregable: pitch de hasta 60 segundos y una mejora basada en lo que entendió otro. Aplicación: explicar un proyecto en una entrevista o reunión sin depender de una lista de tecnologías.",
   },
   {
-    "id": "m5-02",
-    "module": 5,
-    "title": "Demo sin rescate",
-    "duration": "45–50 min",
-    "skills": [
-      "Presentación",
-      "Comunicación efectiva",
-      "Empatía"
+    id: "m5-02",
+    module: 5,
+    title: " Demo sin rescate",
+    duration: " 45 min",
+    skills: [" Presentación", "Comunicación efectiva", "Empatía"],
+    frontBack: " Front + Back",
+    description:
+      "Simulación de una demo donde aparecen errores y preguntas inesperadas.",
+    objective: "Practicar comunicación profesional frente a imprevistos.",
+    materials:
+      "Discord, cronómetro, capturas o guion de una funcionalidad y tarjetas de imprevistos. No se necesita una app funcionando.",
+    steps: [
+      "GUÍA DEL TA · Antes de clase: Explicá que “sin rescate” significa que quien presenta practica cómo conducir la respuesta; puede pedir ayuda explícitamente o pausar. No se provocan fallas reales ni se expone información privada. Prepará tríos.",
+
+      "CONSIGNA PARA COMPARTIR · Mostrá una funcionalidad durante dos minutos. Ante un imprevisto, explicá qué pasó, qué podés mostrar ahora y cómo verificarías lo pendiente. Practiquemos responder con claridad sin inventar una solución.",
+
+      "RECURSOS DEL DESAFÍO · Caso opcional: app de biblioteca con lista de libros, préstamo y confirmación. Guion: buscar un título, elegir socio, confirmar préstamo y mostrar estado. Tarjetas: A «La pantalla no carga»; B «Te preguntan si funciona sin internet y no lo probaste»; C «La confirmación muestra un dato distinto al esperado». Respuesta orientativa: «No puedo confirmar eso todavía; lo voy a probar y compartir el resultado por el canal acordado».",
+
+      "ROLES Y REGLAS · Tríos: presentador, público y observador. El público introduce solo un imprevisto por turno y no insiste en incomodar. El observador mira si distingue hechos de lo desconocido y propone un siguiente paso. No se arregla código durante la práctica. Se puede usar una captura, explicar el flujo o pedir apoyo de forma explícita.",
+
+      "Encuadre (5 min) · El TA explica roles, límites y cómo pausar.",
+
+      "Preparación (7 min) · Cada persona prepara el flujo y un respaldo en texto o capturas.",
+
+      "Primera ronda (15 min) · Tres turnos de cinco minutos: dos de demo, uno de imprevisto y respuesta, y dos de feedback. Roten roles.",
+
+      "Plan de respuesta (5 min) · Escriban una frase para reconocer el problema y otra para indicar siguiente paso y canal de seguimiento.",
+
+      "Repetición (8 min) · Cada participante ensaya de nuevo solo el tramo del imprevisto; el observador compara las respuestas.",
+
+      "Cierre (5 min) · Identifiquen qué ayudó a sostener la claridad sin ocultar el problema.",
+
+      "ADAPTACIONES · Con dos personas, alternen presentador y público y revisen juntos los criterios. Con cuatro, sumen observador del lenguaje y del siguiente paso. Sin proyecto, usen el caso y narren las pantallas. Para 40 minutos, reduzcan preparación a cinco y repetición a cinco minutos.",
     ],
-    "frontBack": "Front + Back",
-    "description": "Simulación de una demo donde aparecen errores y preguntas inesperadas.",
-    "objective": "Practicar comunicación profesional frente a imprevistos.",
-    "materials": "Proyecto o presentación breve.",
-    "steps": [
-      "Una persona presenta una funcionalidad.",
-      "El público realiza preguntas inesperadas.",
-      "El TA introduce un pequeño problema o error.",
-      "La persona debe continuar sin que otra persona la rescate.",
-      "Se analiza cómo respondió ante la situación."
+    debrief: [
+      "¿Qué pudiste afirmar con certeza y qué no?",
+      "¿Cómo mantuviste informada a la audiencia?",
+      "¿Cuándo pedir ayuda fue una decisión útil?",
+      "¿El seguimiento propuesto era concreto y realista?",
     ],
-    "debrief": [
-      "¿Qué hicimos cuando algo salió mal?",
-      "¿Cómo comunicamos que no sabemos algo?",
-      "¿Qué diferencia hay entre ocultar un problema y manejarlo profesionalmente?"
-    ],
-    "transfer": "Las demos reales pueden tener bugs, preguntas difíciles o problemas técnicos. La respuesta profesional también comunica confianza."
+    transfer:
+      "Una demo también comunica cómo se manejan los límites y los problemas. Entregable: guion con respaldo y respuesta a un imprevisto. Aplicación: reconocer un fallo, evitar promesas infundadas y acordar verificación y seguimiento.",
   },
   {
-    "id": "m5-03",
-    "module": 5,
-    "title": "Feedback de proyecto",
-    "duration": "45–50 min",
-    "skills": [
-      "Feedback",
-      "Presentación",
-      "Empatía"
+    id: "m5-03",
+    module: 5,
+    title: " Feedback de proyecto",
+    duration: " 45 min",
+    skills: [" Feedback", "Presentación", "Empatía"],
+    frontBack: " Front + Back",
+    description:
+      "Los participantes practican cómo recibir y transformar feedback sobre un proyecto.",
+    objective:
+      "Aprender a escuchar feedback sin reaccionar defensivamente y convertirlo en acciones.",
+    materials:
+      "Discord, cronómetro y tabla: observación recibida | aclaración | incorporar, investigar o postergar | motivo | acción. Proyecto propio o caso de ejemplo.",
+    steps: [
+      "GUÍA DEL TA · Antes de clase: Formá tríos y acordá evaluar el trabajo, no a la persona. Aclará que escuchar no obliga a aceptar todos los pedidos y que se puede pedir una pausa.",
+
+      "CONSIGNA PARA COMPARTIR · Presentá una funcionalidad y recibí feedback. Antes de defenderla, resumí lo que entendiste y hacé una pregunta. Luego decidí qué incorporar, qué investigar y qué postergar según el objetivo del proyecto.",
+
+      "RECURSOS DEL DESAFÍO · Caso opcional: formulario de préstamo de biblioteca con campos nombre de socio, libro y botón “Enviar”; después aparece “Listo”. Objetivo: registrar un préstamo y saber que quedó guardado. Feedback posible: «No sé qué hace Enviar», «Me gustaría un fondo animado», «Después de Listo no veo qué libro quedó registrado». Son puntos de partida: el equipo debe justificar prioridades. Plantilla de feedback: «Al ver/hacer… entendí/no pude…; sugiero/probaría…».",
+
+      "ROLES Y REGLAS · Tríos: presentador, usuario y observador; roten. En el primer minuto de devolución el presentador escucha y anota; luego parafrasea y pregunta. El usuario describe su experiencia sin generalizar a todos. El observador registra si hubo escucha y si la decisión final se relaciona con el objetivo.",
+
+      "Encuadre y criterios (5 min) · El TA explica escucha, paráfrasis y decisión fundamentada.",
+
+      "Preparación (5 min) · Cada persona elige una funcionalidad o el caso y define para qué usuario y objetivo está pensada.",
+
+      "Rondas de feedback (18 min) · Tres turnos de seis minutos: uno de presentación, uno de feedback, uno de paráfrasis, uno de aclaración y dos para decidir y observar.",
+
+      "Plan de mejora (7 min) · Completen la tabla con al menos una acción prioritaria y cómo comprobarían su resultado.",
+
+      "Contraste (5 min) · Compartan una sugerencia aceptada y otra a investigar o postergar, con razones.",
+
+      "Cierre (5 min) · Registren una forma de pedir feedback más específico la próxima vez.",
+
+      "ADAPTACIONES · Con dos personas, alternen presentar y dar feedback; ambos revisan los criterios. Con cuatro, agreguen otro usuario y comparen experiencias. Sin proyecto, cada persona propone una versión del caso. Para 40 minutos, reduzcan plan de mejora a cinco y contraste a dos minutos.",
     ],
-    "frontBack": "Front + Back",
-    "description": "Los participantes practican cómo recibir y transformar feedback sobre un proyecto.",
-    "objective": "Aprender a escuchar feedback sin reaccionar defensivamente y convertirlo en acciones.",
-    "materials": "Proyecto o presentación.",
-    "steps": [
-      "Una persona presenta brevemente su proyecto.",
-      "Los compañeros realizan observaciones.",
-      "El presentador no puede responder inmediatamente.",
-      "Primero debe resumir qué entendió del feedback.",
-      "Luego puede decidir qué incorporar.",
-      "El grupo analiza el proceso."
+    debrief: [
+      "¿Qué ayudó a escuchar antes de responder?",
+      "¿Qué aclaración cambió el sentido del feedback?",
+      "¿Qué criterio usaste para priorizar?",
+      "¿Cómo verificarías que la mejora resolvió el problema?",
     ],
-    "debrief": [
-      "¿Qué sentimos al recibir críticas?",
-      "¿Qué ayudó a escuchar mejor?",
-      "¿Todo feedback debe incorporarse?"
-    ],
-    "transfer": "Los proyectos evolucionan mediante iteraciones, code review, feedback de usuarios y retrospectivas."
+    transfer:
+      "El feedback se transforma en decisiones, no en una lista automática de pedidos. Entregable: tabla y una acción con criterio de verificación. Aplicación: contrastar sugerencias con necesidades del usuario y alcance antes de incorporarlas al trabajo.",
   },
   {
-    "id": "m5-04",
-    "module": 5,
-    "title": "Demo final",
-    "duration": "45–50 min",
-    "skills": [
-      "Presentación",
-      "Comunicación efectiva",
-      "Comunidad",
-      "Feedback"
+    id: "m5-04",
+    module: 5,
+    title: " Demo final",
+    duration: " 45 min",
+    skills: [" Presentación", "Comunicación efectiva", "Comunidad", "Feedback"],
+    frontBack: " Front + Back",
+    description:
+      "Cierre del recorrido con una presentación breve, feedback y reconocimiento entre compañeros.",
+    objective:
+      "Integrar comunicación, escucha, feedback y reconocimiento en una experiencia final.",
+    materials:
+      "Discord, cronómetro, proyecto o guion de un avance y ficha de feedback: qué entendí | evidencia de una fortaleza | pregunta | mejora posible. Capturas opcionales.",
+    steps: [
+      "GUÍA DEL TA · Antes de clase: Armá salas de cuatro para que todas las personas puedan presentar dentro del tiempo. Si presentan equipos, agrupá como máximo cuatro presentaciones por sala. Permití narrar un avance o usar el caso de biblioteca de esta ficha; no se exige un producto terminado.",
+
+      "CONSIGNA PARA COMPARTIR · Compartamos qué construimos y qué aprendimos. Presentá el problema, una parte de la solución y un aprendizaje del proceso. La audiencia hará una pregunta y devolverá un reconocimiento concreto y una mejora posible.",
+
+      "RECURSOS DEL DESAFÍO · Guion de dos minutos: 30 segundos para usuario y problema; 60 para mostrar o narrar un recorrido; 30 para aprendizaje y siguiente paso. Caso alternativo: biblioteca que registra préstamos; narrar búsqueda de libro, elección del socio y confirmación. Si es una propuesta sin implementar, aclararlo. Ejemplo de reconocimiento: «Explicaste para quién era el flujo antes de mostrarlo; pude seguir la demo».",
+
+      "ROLES Y REGLAS · En cada sala, roten presentación, control del tiempo, pregunta y registro. Todas las personas pueden aportar por chat. No comparen proyectos para elegir un ganador. Los reconocimientos deben citar una conducta o parte del trabajo, y las mejoras deben ser concretas y respetuosas.",
+
+      "Apertura (5 min) · El TA presenta el objetivo de cierre, la ficha y el orden de cada sala.",
+
+      "Preparación (7 min) · Cada persona elige qué mostrar y prepara su aprendizaje y siguiente paso.",
+
+      "Demos en salas (20 min) · Cuatro turnos de cinco minutos: dos de presentación, uno de pregunta y dos de feedback. Registren una fortaleza y una mejora por presentación.",
+
+      "Síntesis del recorrido (5 min) · La sala elige una habilidad que apareció y un ejemplo que la demuestre.",
+
+      "Reconocimiento compartido (4 min) · Cada sala publica su aprendizaje en el chat general; el TA recupera patrones sin exigir una exposición de cada sala.",
+
+      "Cierre individual (4 min) · Cada persona completa: «Voy a seguir… / Voy a practicar… / Mi próxima acción será…».",
+
+      "ADAPTACIONES · Con dos personas, hagan dos rondas de cinco minutos por persona: presentación y luego versión mejorada. Con tres, usen los cinco minutos restantes para revisar feedback. Con grupos grandes, mantengan salas de cuatro y síntesis por chat. Para 40 minutos, reduzcan preparación a cinco y síntesis a dos minutos.",
     ],
-    "frontBack": "Front + Back",
-    "description": "Cierre del recorrido con una presentación breve, feedback y reconocimiento entre compañeros.",
-    "objective": "Integrar comunicación, escucha, feedback y reconocimiento en una experiencia final.",
-    "materials": "Proyecto final o avance significativo.",
-    "steps": [
-      "Cada participante o equipo prepara una presentación breve.",
-      "Presenta problema, solución y aprendizaje.",
-      "El público realiza preguntas.",
-      "Cada compañero aporta un reconocimiento y una mejora posible.",
-      "El TA cierra conectando las habilidades trabajadas durante el recorrido."
+    debrief: [
+      "¿Qué conducta muestra un avance respecto del inicio?",
+      "¿Qué reconocimiento recibiste que estuvo apoyado en un ejemplo?",
+      "¿Qué mejora querés probar en tu próximo proyecto?",
+      "¿Cómo se conectan escucha, comunicación y colaboración en una demo?",
     ],
-    "debrief": [
-      "¿Qué habilidad desarrollamos más?",
-      "¿Qué comportamiento queremos mantener?",
-      "¿Qué nos gustaría mejorar en próximos proyectos?",
-      "¿Dónde aparece todo esto en un equipo profesional?"
-    ],
-    "transfer": "La demo integra comunicación, colaboración, feedback, escucha y capacidad de aprender de los demás."
+    transfer:
+      "Presentar, escuchar y revisar el trabajo integra las habilidades del recorrido. Entregable: demo o relato, ficha de feedback y compromiso personal concreto. Aplicación: cerrar una iteración reconociendo aprendizajes y definiendo el siguiente paso.",
   },
-  {
-    "id": "m5-05",
-    "module": 5,
-    "title": "Tu pitch personal",
-    "duration": "45–50 min",
-    "skills": [
-      "Presentación",
-      "Comunicación efectiva"
-    ],
-    "frontBack": "Front + Back",
-    "description": "Cada participante construye y practica un pitch personal breve y auténtico para presentarse como futuro/a profesional de tecnología (Data Analytics, Data Science, Full Stack, etc.).",
-    "objective": "Armar un pitch de 45 segundos a 1 minuto, con gancho y cierre, reutilizable en la evaluación en vivo del módulo.",
-    "materials": "No requiere materiales especiales. Cada participante trabaja sobre su propio recorrido. Opcional: cronómetro para medir el tiempo.",
-    "steps": [
-      "El TA presenta la idea: un pitch personal breve (45 seg – 1 min), auténtico y memorable, que se practica en voz alta y se reutiliza en la evaluación en vivo del módulo.",
-      "Estructura en 3 actos — Acto 1 (¿Quién sos?): nombre, formación previa y algo distintivo de tu perfil.",
-      "Acto 2 (¿Por qué estás acá?): qué te motivó a estudiar tu carrera y qué habilidades traés de antes.",
-      "Acto 3 (¿A dónde vas?): qué oportunidades te interesan y qué te entusiasma del futuro.",
-      "Cada participante completa el modelo base: «Hola, soy [tu nombre]. Vengo de [formación / experiencia] y algo que me distingue es [tu rasgo]. Llegué a esta carrera porque [tu motivación]; de mi camino anterior traigo [tus habilidades]. Hoy busco [tipo de oportunidad] y me entusiasma [qué del futuro].»",
-      "Tips para que enganche: breve y claro (sin relleno ni tecnicismos), auténtico, un buen gancho al inicio y un cierre que quede resonando. Opcional: ponerle un título tipo TED (ej.: «La curiosidad como motor de datos»).",
-      "Cada participante presenta su pitch en voz alta en 1 minuto, lo cronometra y lo repite hasta que salga natural y fluido.",
-      "Checklist final: tengo mis 3 actos, dura menos de 1 minuto, tiene gancho y cierre, le puse un título y lo practiqué en voz alta."
-    ],
-    "debrief": [
-      "¿Se entiende el pitch? (claridad)",
-      "¿Se destaca de los demás? (originalidad)",
-      "¿Conecta con quien escucha? (impacto)",
-      "¿Qué gancho o frase de cierre podría mejorarlo?"
-    ],
-    "transfer": "Quien busca insertarse en tecnología necesita presentarse con claridad y confianza en entrevistas, presentaciones y evaluaciones; un buen pitch personal es una herramienta reutilizable."
-  },
-  {
-    "id": "m5-06",
-    "module": 5,
-    "title": "Preguntas de entrevista (habilidades blandas)",
-    "duration": "45–50 min",
-    "skills": [
-      "Comunicación efectiva",
-      "Presentación"
-    ],
-    "frontBack": "Front + Back",
-    "description": "Simulación de entrevista con un banco de 12 preguntas de habilidades blandas; sirve para practicar para cualquier carrera o rol.",
-    "objective": "Practicar respuestas a preguntas frecuentes de entrevista, ganar confianza y aprender a orientar cada respuesta.",
-    "materials": "Banco de 12 preguntas (una por vez). Se complementa con el flyer de convocatoria «¡Sé parte de nuestro equipo!» para invitar al SUP. Recomendado: cámara y micrófono para simular la entrevista real.",
-    "steps": [
-      "Repartan los roles: un TA entrevista y el estudiante responde; después rotan.",
-      "Una pregunta por vez, cada una con qué evalúan y hacia dónde orientar la respuesta. No hay respuestas «correctas»: la idea es practicar y ganar confianza.",
-      "Presentación — «Contame sobre vos.» Evalúan cómo te presentás y qué te diferencia; orientá hacia tu experiencia, tu recorrido y algo único conectado con el puesto.",
-      "Autoconocimiento — «¿Cuáles son tus fortalezas y tus debilidades?» Mostrá que te conocés; uní las debilidades con cómo las estás trabajando (evitá el clásico «soy demasiado perfeccionista»).",
-      "Trabajo en equipo — «Contame una experiencia trabajando en equipo. ¿Qué rol tuviste?» Dá un ejemplo concreto: tu rol, cómo se organizaron y qué aportaste.",
-      "Resolución de conflictos — «Misma meta, distintas ideas de cómo lograrla. ¿Cómo llegás a un consenso?» Escucha activa, buscar puntos en común y decidir con criterios, no imponiendo.",
-      "Aprendizaje — «Contame un error que hayas cometido y cómo lo resolviste.» Mostrá el error como oportunidad y cómo construiste la solución.",
-      "Adaptabilidad — «¿Cómo reaccionás ante un cambio inesperado?» Un ejemplo donde te adaptaste, mantuviste la calma y encontraste el lado positivo.",
-      "Feedback — «¿Cómo manejás las críticas sobre tu trabajo?» Mostrá que escuchás sin reaccionar impulsivamente, comprendés y ajustás tu desempeño (mentalidad de crecimiento).",
-      "Organización — «Tenés varios proyectos y poco tiempo. ¿Cómo los manejás?» Contá tu método concreto para priorizar, planificar y cumplir los plazos.",
-      "Motivación — «¿Qué te motiva?» Un momento real en que estuviste motivado y cómo seguís adelante aunque la motivación baje.",
-      "Marca personal — «¿Qué te hace único frente a otros candidatos?» Habilidades, fortalezas y logros; conciso y centrado en cómo aportás (evitá sonar pedante o dar una lista interminable).",
-      "Proyección — «¿Cuáles son tus objetivos a corto y largo plazo?» Corto (meses) y largo (2-5 años), cómo pensás alcanzarlos y cómo se alinean con el puesto (evitá «no lo pensé»).",
-      "Comunicación — «¿Cómo describirías tus habilidades de comunicación?» Respaldalo con ejemplos individuales y en equipo, y cómo te adaptás al canal.",
-      "Cierren cada ronda con feedback amable y concreto: qué estuvo bien y qué puede mejorar."
-    ],
-    "debrief": [
-      "¿Qué respuestas se sintieron más honestas y bien orientadas?",
-      "¿Qué preguntas costaron más y por qué?",
-      "Cuando te pregunten «¿tenés alguna pregunta para nosotros?», nunca respondas «ninguna»: preguntá por el día a día del rol, la cultura del equipo, los desafíos o cómo se maneja el feedback.",
-      "¿Qué te llevás para practicar antes de una entrevista real?"
-    ],
-    "transfer": "Las entrevistas laborales evalúan habilidades blandas tanto como técnicas; practicar respuestas honestas y bien orientadas reduce la ansiedad y mejora el desempeño real."
-  }
 ];
